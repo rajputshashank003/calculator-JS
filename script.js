@@ -87,7 +87,7 @@ let operator = "";
 
 let divide = document.querySelector(".divide");
 divide.addEventListener("click", function() {
-    display[0].innerText =  "/ ";
+    display[0].innerText +=  "/ ";
     operator = "/";
     b = a;
     a = "";
@@ -95,7 +95,7 @@ divide.addEventListener("click", function() {
 
 let add = document.querySelector(".add");
 add.addEventListener("click", function() {
-    display[0].innerText =  "+ ";
+    display[0].innerText +=  "+ ";
     operator = "+";
     b = a;
     a = "";
@@ -108,7 +108,7 @@ minus.addEventListener("click", function() {
         display[0].innerText =  "-";
         console.log("a = " ,a);
     } else {
-        display[0].innerText =  "-";
+        display[0].innerText +=  "-";
         operator = "-";
         b = a;
         a = "";
@@ -117,7 +117,7 @@ minus.addEventListener("click", function() {
 
 let mul = document.querySelector(".mul");
 mul.addEventListener("click", function() {
-    display[0].innerText =  "X ";
+    display[0].innerText +=  "X ";
     operator = "X";
     b = a;
     a = "";
@@ -141,19 +141,19 @@ backspace.addEventListener("click", function () {
 let equals = document.querySelector(".equals");
 equals.addEventListener("click", function() {
     if(operator == "/"){
-        display[0].innerText =  b/a ;
+        display[0].innerText += "=" +(b/a) ;
     } else if(operator == "+"){
         let val1 = parseInt(a);
         let val2 = parseInt(b);
-        display[0].innerText =  val1 + val2 ;
+        display[0].innerText +=  "=" +( val1 + val2) ;
     } else if(operator == "-"){
         let val1 = parseInt(b);
         let val2 = parseInt(a);
-        display[0].innerText =  val1 - val2 ;
+        display[0].innerText += "-" + (val1 - val2) ;
     } else if(operator == "X"){
         let val1 = parseInt(b);
         let val2 = parseInt(a);
-        display[0].innerText =  val1 * val2 ;
+        display[0].innerText = "X" + (val1 * val2) ;
     }
     a="";
     b="";
