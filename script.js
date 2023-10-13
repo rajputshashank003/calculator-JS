@@ -135,7 +135,7 @@ let backspace = document.querySelector(".backspace");
 backspace.addEventListener("click", function () {
     a = a.slice(0,-1);
     console.log(a);
-    display[0].innerText = operator + a;
+    display[0].innerText = b + operator + a;
 });
 
 let equals = document.querySelector(".equals");
