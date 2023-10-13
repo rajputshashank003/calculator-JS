@@ -153,7 +153,7 @@ equals.addEventListener("click", function() {
     } else if(operator == "X"){
         let val1 = parseInt(b);
         let val2 = parseInt(a);
-        display[0].innerText = "X" + (val1 * val2) ;
+        display[0].innerText += "X" + (val1 * val2) ;
     }
     a="";
     b="";
