@@ -141,7 +141,9 @@ backspace.addEventListener("click", function () {
 let equals = document.querySelector(".equals");
 equals.addEventListener("click", function() {
     if(operator == "/"){
-        display[0].innerText += "=" +(b/a) ;
+        let val1 = parseInt(b);
+        let val2 = parseInt(a);
+        display[0].innerText +=  "=" +( val1 / val2) ;
     } else if(operator == "+"){
         let val1 = parseInt(a);
         let val2 = parseInt(b);
