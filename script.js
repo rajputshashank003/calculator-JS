@@ -105,7 +105,7 @@ let minus = document.querySelector(".minus");
 minus.addEventListener("click", function() {
     if(a == ""){
         a += "-";
-        display[0].innerText =  "-";
+        display[0].innerText +=  "-";
         console.log("a = " ,a);
     } else {
         display[0].innerText +=  "-";
@@ -138,25 +138,32 @@ backspace.addEventListener("click", function () {
     display[0].innerText = b + operator + a;
 });
 
+let fullstop = document.querySelector(".fullstop");
+fullstop.addEventListener("click", function () {
+    a += ".";
+    display[0].innerText += ".";
+});
+
 let equals = document.querySelector(".equals");
 equals.addEventListener("click", function() {
     if(operator == "/"){
-        let val1 = parseInt(b);
-        let val2 = parseInt(a);
+        let val1 = parseFloat(b);
+        let val2 = parseFloat(a);
         display[0].innerText +=  "=" +( val1 / val2) ;
     } else if(operator == "+"){
-        let val1 = parseInt(a);
-        let val2 = parseInt(b);
+        let val1 = parseFloat(a);
+        let val2 = parseFloat(b);
         display[0].innerText +=  "=" +( val1 + val2) ;
     } else if(operator == "-"){
-        let val1 = parseInt(b);
-        let val2 = parseInt(a);
+        let val1 = parseFloat(b);
+        let val2 = parseFloat(a);
         display[0].innerText += "=" + (val1 - val2) ;
     } else if(operator == "X"){
-        let val1 = parseInt(b);
-        let val2 = parseInt(a);
+        let val1 = parseFloat(b);
+        let val2 = parseFloat(a);
         display[0].innerText += "=" + (val1 * val2) ;
     }
     a="";
     b="";
+    operator ="";
 });
